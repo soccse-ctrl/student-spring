@@ -42,17 +42,11 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
 
-        <!--  MySQL connector (Boot will manage version automatically) -->
+        <!-- MySQL connector (Boot will manage version automatically) -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>   <!--  Last stable release -->
-            <scope>runtime</scope>
-        </dependency>
-        <!-- Postgres -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
 
