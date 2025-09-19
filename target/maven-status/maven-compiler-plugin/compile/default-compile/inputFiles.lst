@@ -1,9 +1,7 @@
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/Main.java
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/demo/DemoApplication.java
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/demo/config/CorsConfig.java
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/demo/controller/StudentController.java
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/demo/controller/StudentsController.java
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/demo/model/Student.java
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/demo/model/Students.java
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/demo/repository/StudentRepository.java
-/mnt/c/Users/admin/IdeaProjects/student-demo/src/main/java/org/example/demo/service/StudentService.java
+C:\Users\admin\IdeaProjects\student-demo\student-demo\src\main\java\org\example\demo\config\CorsConfig.java
+C:\Users\admin\IdeaProjects\student-demo\student-demo\src\main\java\org\example\demo\controller\StudentsController.java
+C:\Users\admin\IdeaProjects\student-demo\student-demo\src\main\java\org\example\demo\DemoApplication.java
+C:\Users\admin\IdeaProjects\student-demo\student-demo\src\main\java\org\example\demo\model\Students.java
+C:\Users\admin\IdeaProjects\student-demo\student-demo\src\main\java\org\example\demo\repository\StudentRepository.java
+C:\Users\admin\IdeaProjects\student-demo\student-demo\src\main\java\org\example\demo\service\StudentService.java
+C:\Users\admin\IdeaProjects\student-demo\student-demo\src\main\java\org\example\Main.java
