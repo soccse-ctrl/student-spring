@@ -1,41 +1,28 @@
 package org.example.demo.config;
-// Declares that this class is in the package 'org.example.demo'
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-// Marks this class as a configuration class — Spring will treat it like a source of bean definitions
-
 public class CorsConfig {
 
-    @Bean
-    // Defines a bean — Spring will create and manage this object
+    @Value("${FRONTEND_ORIGIN:http://localhost:5175}") // Inject frontend origin from env or default
+    private String frontendOrigin;
 
+    @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")
-                        // Apply CORS settings to all endpoints (e.g., /students, /login, etc.)
-
-                        .allowedOrigins("FRONTEND_ORIGIN")
-                        //  Allow requests from your React app running on port 5174
-                        // Make sure there is NO trailing slash and NO leading/trailing space
-
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        // Allow these HTTP methods from the frontend
-
-                        .allowedHeaders("*")
-                        // Allow all headers from the frontend (e.g., Content-Type, Authorization)
-
-                        .allowCredentials(true)
-                        // Allow cookies and credentials (e.g., for session handling or auth headers)
-
-                        .maxAge(3600);
-                // Cache CORS configuration for 3600 seconds (1 hour)
+                registry.addMapping("/**") // Apply to all endpoints
+                        .allowedOrigins(frontendOrigin) // Allow requests from frontend origin
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allowed HTTP methods
+                        .allowedHeaders("*") // Allow all headers
+                        .allowCredentials(true) // Allow credentials (cookies, auth headers)
+                        .maxAge(3600); // Cache preflight response for 1 hour
             }
         };
     }
